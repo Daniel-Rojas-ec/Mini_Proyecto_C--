@@ -136,3 +136,75 @@ void factura(string productos[], float precios[], int &cantidad)
         
     } while(repetir==1);
 }
+
+void menu(string productos[], float precios[], int &cantidad)
+{
+    int opcion;
+
+    do
+    {
+        cout << "===== MENU =====" << endl;
+
+        cout << "1. Registrar productos" << endl;
+
+        cout << "2. Mostrar productos" << endl;
+
+        cout << "3. Suma total" << endl;
+
+        cout << "4. Promedio general" << endl;
+
+        cout << "5. Buscar producto" << endl;
+
+        cout << "6. Producto más caro y más barato" << endl;
+
+        cout << "7. Factura" << endl;
+
+        cout << "8. Salir" << endl;
+
+        cin>>opcion;
+
+        switch (opcion)
+        {
+            case 1:
+                registrardatos (productos, precios, cantidad);
+                break;
+            case 2:
+                mostrardatos (productos, precios, cantidad);
+                break;
+            case 3:
+                sumatotal(precios, cantidad);
+                break;
+            case 4:
+                promedio (precios, cantidad);
+                break;
+            case 5:
+                buscarproducto(productos, precios, cantidad);
+                break;
+            case 6:
+                productocaroybarato(productos, precios, cantidad);
+                break;
+            case 7:
+                factura(productos, precios, cantidad);
+                break;
+            case 8:
+                cout<<"Saliendo del programa......."<<endl;
+                break;
+            default:
+                cout<<"Opcion invalida"<<endl;
+        }
+    } while (opcion!=8);
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
