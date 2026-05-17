@@ -72,7 +72,7 @@ void buscarproducto(string productos[], float precios[], int &cantidad)
     {
         if( nombre == productos[i])
         {
-            encontrado=false;
+            encontrado=true;
             cout<<"Producto encontrado"<<endl;
             cout<<nombre<<endl;
             cout<<"Precio: "<<"$"<<precios[i]<<endl;
@@ -122,7 +122,7 @@ void factura(string productos[], float precios[], int &cantidad)
     do
     {
         cout<<"=====FACTURA====="<<endl;
-        for(i=0;1<cantidad;i++)
+        for(i=0;i<cantidad;i++)
         {
             cout<<productos[i]<<" ** "<<"$"<<precios[i]<<endl;
         }
